@@ -441,7 +441,41 @@ footer {
     }
 
     #menu_links {
-        display: none;
+        /* display: none; */ /* dia 02/06 mudou para comentado */
+
+        flex-direction: column;
+
+        position: absolute; /* dia 02/06  */
+        right: 0px; /* dia 02/06 0px de distancia do header(pai) */
+        top: 80px; 
+        z-index: 1; /* dia 02/06  */
+
+        background-color: var(--azul); /* dia 02/06  */
+
+        height: 400px;/* dia 02/06  */
+
+        padding-bottom: 50px; /* dia 02/06  */
+
+        box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.75);
     } /*para sumir os outros links dos menus  */
+    
+ 
+
+    .header {
+        position: relative;
+
+    }/* dia 02/06 adicionado  */
 
 }/* dia 01/06 adicionado  */
+
+@media screen and (min-width: 769px) {
+    #menu_links{
+        display: flex;
+    }
+}/* dia 02/06 adicionado  */
+
+@media screen and (max-width: 700px) {
+    .dev_conteudo img, .clientes_conteudo img {
+        display: none;
+    }
+}/* dia 02/06 adicionado  */
